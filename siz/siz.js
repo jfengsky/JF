@@ -1,8 +1,9 @@
 ﻿/**
-*	id选择器和标签选择器
-*	
-*	
-*/
+ * User: jiangfeng
+ * Date: 12-5-7
+ * Time: 16:36
+ * id选择器和标签选择器
+ */
 function $(id){
 	return document.getElementById(id);
 }
