@@ -1,13 +1,14 @@
 ﻿/**
-*	获取标签的属性
-*	
-*	
-*/
+ * User: jiangfeng
+ * Date: 12-5-7
+ * Time: 17:11
+ * 获取标签属性
+ */
 function getAttr(id,name){
     var elem = $(id).getAttribute(name);
     if(elem == null){
         return false
-    }else if(!UA.ie()){   //如果非ie
+    }else if(!document.all){   //如果非ie
         if(name == 'checked'){
             if (elem.length == 0){
                 return true;
