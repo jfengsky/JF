@@ -5,7 +5,7 @@
  * 获取标签属性
  */
 function getAttr(id,name){
-    var elem = $(id).getAttribute(name);
+    var elem = $(id).getAttribute(name);    //$(id) 参考 function $(id){return document.getElementById(id)}
     if(elem == null){
         return false
     }else if(!document.all){   //如果非ie
