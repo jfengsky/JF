@@ -4,9 +4,27 @@
  * Time: 14:29
  * 获取外链css的值
  */
-function getCss(el){
 
+function getCss(id,sty){
+    var _node = document.getElementById(id);
+    if(document.all){
+        var _value = _node.currentStyle[sty];
+        if( _value == undefined){
+            return false;
+        }else{
+            return _value;
+        }
+    }else{
+        return window.getComputedStyle(_node,null).getPropertyValue(sty);
+    }
 }
+
+/*
+*   对于css缩写格式，IE能正确返回，firefox则返回空
+*/
+
+
+
 
 /*
  Dom中的getPropertyValue方法可以用来获取元素中指定的css属性值．该方法支持W3C标准．
