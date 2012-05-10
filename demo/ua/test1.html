@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ietest</title>
+</head>
+<body>
+<script>
+if (+[1,]){
+    alert('您正在使用非IE浏览器');
+}else {
+    alert('您正在使用IE浏览器');
+}
+
+if(!window.ActiveXObject){
+    alert('您正在使用非IE浏览器');
+}else{
+    alert('您正在使用IE浏览器');
+}
+</script>
+</body>
+</html>
