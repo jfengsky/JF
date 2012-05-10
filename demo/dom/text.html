@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div id="demo">2345</div>
+<script>
+function text(id,val){
+    if(arguments.length == 1){
+        if(!+[1,]){
+            return $(id).innerText;
+        }else{
+            return $(id).textContent;
+        }
+    }else if(arguments.length == 2){
+        $(id).innerText = val;
+    }
+}
+function $(id){return document.getElementById(id)};
+var get_Text = text('demo');
+    alert(get_Text);
+text('demo','aaaa')
+</script>
+</body>
+</html>
