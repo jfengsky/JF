@@ -10,7 +10,7 @@
 
 function getCss(id,sty,hov){
     var _node = document.getElementById(id);
-    if(document.all){
+    if(!+[1,]){
         var _value = _node.currentStyle[sty];
         if( _value == undefined){
             return false;

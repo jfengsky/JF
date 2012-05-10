@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getCss</title>
+    <link rel="stylesheet" href="getCss.css" />
+</head>
+<body>
+<div class="test" id="demo">test</div>
+<script>
+var _node = document.getElementById('demo');
+// window.getComputedStyle(_node,hov).getPropertyValue(sty);
+//window.getComputedStyle(_node,null) 返回节点所有属性值
+if(!+[1,]){
+    alert(_node.currentStyle['margin']);    //对于缩写格式ie能正确返回
+}else{
+    console.log(window.getComputedStyle(_node,null));   //返回标签所有css属性
+    //console.log(window.getComputedStyle(_node,'hover'));
+    //console.log( window.getComputedStyle(_node,null).getPropertyValue('width') );
+    console.log( window.getComputedStyle(_node,'hover').getPropertyValue('width') );    //对于伪类，一定要是节点指定的，id 无法获得class的伪类
+    console.log( window.getComputedStyle(_node,null).getPropertyValue('margin') );  //缩写格式无法正确返回
+}
+</script>
+</body>
+</html>
