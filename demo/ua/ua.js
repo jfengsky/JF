@@ -1,8 +1,7 @@
 ﻿/**
- * User: jiangfeng
- * Date: 12-5-7
- * Time: 16:12
  * 判断浏览器是否ie
+ * @author jiangfeng
+ * @time: 12-5-7 16:12
  * @return false 或者 IE版本号
  */
 var UA = {
