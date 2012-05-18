@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        p{
+            height:800px;
+            width:100%;
+            border:1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <input type="button" value="setTop" id="demo">
+    <input type="button" value="getTop" id="demo2">
+</p>
+
+<script>
+var btn = document.getElementById('demo');
+var btn2 = document.getElementById('demo2');
+function scrollTop(num){
+    if (arguments.length <= 0){
+        var scrotop = document.documentElement.scrollTop;
+        return scrotop;
+    }else{
+        document.documentElement.scrollTop = num;
+    }
+
+}
+
+btn2.onclick = function(){
+    console.log(scrollTop());
+}
+btn.onclick = function(){
+    scrollTop(210)
+}
+</script>
+</body>
+</html>
