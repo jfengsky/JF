@@ -14,7 +14,7 @@ btn.onchange = function(){
         page:1,
         token:'abcdefg'
     };
-    ajax('POST','http://jfeng.daily.taobao.net/respones.php',data,function(data){
+    ajax('get','http://jfeng.daily.taobao.net/respone.php',data,function(data){
         console.log(data);
     });
 };
