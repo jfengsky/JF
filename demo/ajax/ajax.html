@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ajax</title>
+    <script src="ajax.js"></script>
+</head>
+<body>
+<input type="text" id="button">
+<script>
+var btn = document.getElementById('button');
+btn.onchange = function(){
+    var data = {
+        count:12,
+        page:1,
+        token:'abcdefg'
+    };
+    ajax('POST','http://jfeng.daily.taobao.net/respones.php',data,function(data){
+        console.log(data);
+    });
+};
+
+
+//var testdata = {
+//    count:12,
+//    page:1,
+//    token:'3sev-se'
+//};
+//var para = '';
+//for( xy in testdata){
+//    para += xy + '=' + testdata[xy] + '&';
+//    console.log(xy + '=' + testdata[xy]);
+//}
+//console.log(para);
+//console.log(testdata);
+//console.log(window.testdata);
+//创建XMLHttpRequest对象
+//var xmlHttp;
+//function createXMLHttpRequest(){
+//    if(window.ActiveXobject){
+//        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+//    }else if(window.XMLHttpRequest){
+//        xmlHttp = new XMLHttpRequest();
+//    }
+//}
+//function startRequest(){
+//    createXMLHttpRequest();
+//    xmlHttp.onreadystatechange = handleStateChange;
+//    xmlHttp.open('GET','http://jfeng.daily.taobao.net/respone.php?t=' + Math.random(),true);
+//    xmlHttp.send(null);
+//}
+//function handleStateChange(){
+//    if(xmlHttp.readyState == 4){
+//        if(xmlHttp.status == 200){
+//            listenStates();
+//        }
+//    }
+//}
+//function listenStates(){
+//    var textDoc = xmlHttp.responseText;
+//    btn.value = textDoc;
+//}
+//
+//var btn = document.getElementById('button');
+//    btn.onchange = function(){
+//        startRequest();
+//    }
+</script>
+</body>
+</html>
