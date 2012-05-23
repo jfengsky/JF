@@ -1,12 +1,13 @@
 /**
- * ·µ»Øä¯ÀÀÆ÷¿ÉÊÓ¸ß¶ÈºÍ¿í¶È
+ * è·å–æµè§ˆå™¨çª—å£å¯è§†å¤§å°
  * @Author: wb-jiangfeng
- * @Time: 12-5-23 ÉÏÎç11:54
+ * @Time: 12-5-23 11:54
  * @Return: array [height,width]
  *
  */
 function viewSize(){
-    this.height = document.documentElement.clientHeight;
-    this.width = document.documentElement.clientWidth;
-    return [this.height,this.width];
+    this._size = [];
+    this._size[0] = document.documentElement.clientHeight;
+    this._size[1] = document.documentElement.clientWidth;
+    return this._size;
 }

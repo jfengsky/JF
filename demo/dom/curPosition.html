@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>鼠标位置</title>
+</head>
+x:<div id="dx">0</div><br>
+y:<div id="dy">0</div>
+<body>
+
+<script>
+/*
+var Event = {
+    //ev: document.attachEvent || document.addEventListener,
+    on:function(event,fn){
+        if(+[0,]){
+            document.addEventListener(event, fn, false)
+        }else{
+            document.attachEvent("on" + event, fn);
+        }
+    }
+};
+*/
+var Event = {
+    //ev: document.attachEvent || document.addEventListener,
+    on:function(event,fn){
+        if(+[1,]){
+            document.addEventListener(event, fn, false)
+        }else{
+            document.attachEvent('on' + event, fn);
+        }
+    }
+};
+function curPosition(ev){
+    this.position = [];
+    this.position[0] = ev.clientX + document.body.scrollTop - document.body.clientTop;
+    this.position[1] = ev.clientY + document.body.scrollLeft - document.body.clientLeft;
+
+    return this.position;
+}
+Event.on('mousemove',function(ev){
+    console.log(curPosition(ev));
+});
+</script>
+</body>
+</html>

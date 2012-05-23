@@ -1,13 +1,14 @@
 /**
- * ·µ»ØÎÄµµ¸ß¶ÈºÍ¿í¶È
+ * è·å¾—æ–‡æ¡£é«˜åº¦å’Œå®½åº¦å¤§å°
  * @Author: wb-jiangfeng
- * @Time: 12-5-23 ÉÏÎç11:23
+ * @Time: 12-5-23 11:23
  * @Return: array [height,width]
  *
  */
 
 function docSize(){
-    this.height = document.body.clientHeight;
-    this.width = document.body.clientWidth;
-    return [this.height,this.width];
+    this._size = [];
+    this._size[0] = document.body.clientHeight;
+    this._size[1] = document.body.clientWidth;
+    return this._size;
 }

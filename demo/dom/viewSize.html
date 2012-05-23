@@ -6,9 +6,10 @@
 <body>
 <script>
 function viewSize(){
-    this.height = document.documentElement.clientHeight;
-    this.width = document.documentElement.clientWidth;
-    return [this.height,this.width];
+    this._size = [];
+    this._size[0] = document.documentElement.clientHeight;
+    this._size[1] = document.documentElement.clientWidth;
+    return this._size;
 }
 console.log(viewSize());
 </script>

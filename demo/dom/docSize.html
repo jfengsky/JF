@@ -20,11 +20,12 @@
     abcd
 </div>
 <script>
-function docSize(){
-    this.height = document.body.clientHeight;
-    this.width = document.body.clientWidth;
-    return [this.height,this.width];
-}
+    function docSize(){
+        this._size = [];
+        this._size[0] = document.body.clientHeight;
+        this._size[1] = document.body.clientWidth;
+        return this._size;
+    }
 alert(docSize());
 </script>
 </body>
