@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>缓动公式</title>
+<script src="tween.js"></script>
+<style>
+.boder{
+    border: 1px solid #ccc;
+    height:300px;
+    width:800px;
+    margin:auto;
+    position: relative;
+}
+#demo{
+    height:50px;
+    width:50px;
+    background: #333;
+    position: absolute;
+    left:0;
+    top:0;
+}
+</style>
+</head>
+<body>
+<input type="button" id="slow" value="click" />
+<input type="button" id="stop" value="stop" />
+<div class="boder">
+    <div id="demo"></div>
+</div>
+<script>
+var btn = document.getElementById('slow');
+var club = document.getElementById('demo');
+var stop = document.getElementById('stop');
+var t = 0; // 时间 ms
+var c = 800; // 距离
+var d = 2000; // 移动该距离花的时间 ms
+var b = 0; // 当前的位置
+
+var jishu = 0;
+var twe = new Tween();
+btn.onclick = function(){
+    var distance = 0;
+    var anim = setInterval(function(){
+        if( t >= d){
+            clearInterval(anim);
+        }
+        jishu ++;
+        t = t + 25;
+        var dis = parseInt(twe.linear(t, b, c, d));
+        console.log('计数:' + jishu + ' 所花时间:' + t + 'ms 移动距离:' + dis + 'px');
+        club.style.left = dis + 'px';
+    },25);
+    stop.onclick = function(){
+        clearInterval(anim);
+    };
+}
+
+
+
+</script>
+</body>
+</html>
