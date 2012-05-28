@@ -33,7 +33,7 @@ var btn = document.getElementById('slow');
 var club = document.getElementById('demo');
 var stop = document.getElementById('stop');
 var t = 0; // 时间 ms
-var c = 800; // 距离
+var c = 750; // 距离
 var d = 2000; // 移动该距离花的时间 ms
 var b = 0; // 当前的位置
 
@@ -47,7 +47,7 @@ btn.onclick = function(){
         }
         jishu ++;
         t = t + 25;
-        var dis = parseInt(twe.linear(t, b, c, d));
+        var dis = parseInt(twe.queeaseOut(t, b, c, d));
         console.log('计数:' + jishu + ' 所花时间:' + t + 'ms 移动距离:' + dis + 'px');
         club.style.left = dis + 'px';
     },25);
