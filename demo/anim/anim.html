@@ -46,11 +46,11 @@ btn.onclick = function(){
             clearInterval(anim);
         }
         jishu ++;
-        t = t + 25;
+        t = t + 30;
         var dis = parseInt(twe.queeaseOut(t, b, c, d));
         console.log('计数:' + jishu + ' 所花时间:' + t + 'ms 移动距离:' + dis + 'px');
         club.style.left = dis + 'px';
-    },25);
+    },30);
     stop.onclick = function(){
         clearInterval(anim);
     };
